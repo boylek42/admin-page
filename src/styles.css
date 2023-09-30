@@ -1,0 +1,74 @@
+/* .grid-container{
+	display: grid;
+	/* With  grid-template, the rows are before the slash and the columns are defined afterwards.
+	/* The numbers define the distance between the columns or rows. In this exmaple each row is 200px apart.
+	grid-template: 200px / 100px 100px 100px;
+}
+*/
+
+.grid-container {
+	display: grid;
+	grid-template: repeat(3, 100px) / repeat(3, 100px);
+}
+
+.grid-container > div {
+	background-color: lightyellow;
+	border: 1px solid black;
+}
+
+
+
+.floor-container{
+	margin: 100px;
+	display: inline-grid;
+	grid-template: repeat(5, 40px) / repeat(5, 40px);
+	column-gap: 20px;
+	row-gap: 20px;
+
+	border: 1px solid gray;
+}
+
+.floor-container .room {
+	text-align: center;
+	font-size: .5rem;
+	border: 1px solid black;
+	background-color: lightskyblue;
+}
+
+#backroom {
+	grid-row-start: 1;
+	grid-row-end: 2;
+	grid-column: 1 / span 5;
+}
+
+#bathroom {
+	grid-row-start: 2;
+	grid-row-end: 3;
+	grid-column-start: 1;
+	grid-column-end: 2;
+}
+
+#kitchen{
+	grid-row-start: 2;
+	grid-row-end: 3;
+
+	grid-column-start: 2;
+	grid-column-end: 6
+}
+
+#stairs{
+	grid-area: 3 / 1 / -1 / 2;
+
+	/* grid-row-start: 3;
+	grid-row-end: -1;
+
+	grid-column-start: 1;
+	grid-column-end: 2; */
+}
+
+#living-room {
+	grid-row: 3 / span 3;
+
+	grid-column-start: 2;
+	grid-column-end: -1;
+}
